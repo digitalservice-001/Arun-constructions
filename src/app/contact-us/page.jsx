@@ -52,37 +52,52 @@ export default function ContactPage() {
             {/* Left Column - Address and Map */}
             <div className="space-y-8">
               {/* Address Information */}
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h2 className="text-2xl font-semibold mb-6">Our Office</h2>
-                <div className="space-y-4">
+              <div className="bg-white p-4 sm:p-6 rounded-lg shadow-md w-full max-w-xl mx-auto">
+                <h2 className="text-2xl font-semibold mb-6 text-center sm:text-left">
+                  Our Office
+                </h2>
+                <div className="space-y-6">
+                  {/* Address */}
                   <div className="flex items-start">
                     <MapPin className="h-6 w-6 text-gray-700 mr-3 mt-1 shrink-0" />
                     <div>
-                      <h3 className="font-medium text-lg">Address</h3>
-                      <p className="text-gray-600">
-                        -----
+                      <h3 className="font-medium text-base sm:text-lg">
+                        Address
+                      </h3>
+                      <p className="text-gray-600 text-sm sm:text-base leading-snug">
+                        Block-1 Flat-1, Saravana's Lakshminarayana Apartment
                         <br />
-                        Coimbatore, Tamil Nadu
+                        Koothandavar Kovil Street, Vadavalli
                         <br />
-                        India - 641035
+                        Coimbatore, Tamil Nadu, India - 641035
                       </p>
                     </div>
                   </div>
 
+                  {/* Phone */}
                   <div className="flex items-start">
                     <Phone className="h-6 w-6 text-gray-700 mr-3 mt-1 shrink-0" />
                     <div>
-                      <h3 className="font-medium text-lg">Phone</h3>
-                      <p className="text-gray-600">+91 7358803892</p>
+                      <h3 className="font-medium text-base sm:text-lg">
+                        Phone
+                      </h3>
+                      <p className="text-gray-600 text-sm sm:text-base">
+                        +91 7358803892
+                      </p>
                     </div>
                   </div>
 
+                  {/* Email */}
                   <div className="flex items-start">
                     <Mail className="h-6 w-6 text-gray-700 mr-3 mt-1 shrink-0" />
-                    <div>
-                      <h3 className="font-medium text-lg">Email</h3>
-                      <p className="text-gray-600">
-                        arunconstructionsvadavallicbe@gmail.com{" "}
+                    <div className="min-w-0">
+                      {" "}
+                      {/* allows inner content to wrap correctly */}
+                      <h3 className="font-medium text-base sm:text-lg">
+                        Email
+                      </h3>
+                      <p className="text-gray-600 text-sm sm:text-base break-words">
+                        arunconstructionsvadavallicbe@gmail.com
                       </p>
                     </div>
                   </div>
