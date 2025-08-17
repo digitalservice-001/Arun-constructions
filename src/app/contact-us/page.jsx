@@ -11,7 +11,6 @@ export default function ContactPage() {
     reset,
     formState: { isSubmitting, errors },
   } = useForm();
-  // const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState(null);
 
   const onSubmit = async (data) => {
@@ -82,7 +81,9 @@ export default function ContactPage() {
                     <Mail className="h-6 w-6 text-gray-700 mr-3 mt-1 shrink-0" />
                     <div>
                       <h3 className="font-medium text-lg">Email</h3>
-                      <p className="text-gray-600">arunconstructionsvadavallicbe@gmail.com </p>
+                      <p className="text-gray-600">
+                        arunconstructionsvadavallicbe@gmail.com{" "}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -99,7 +100,7 @@ export default function ContactPage() {
                     style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
+                    referrerPolicy="no-referrer-when-downgrade"
                   ></iframe>
                 </div>
               </div>
@@ -108,14 +109,6 @@ export default function ContactPage() {
             {/* Right Column - Contact Form */}
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h2 className="text-2xl font-semibold mb-6">Send Us a Message</h2>
-
-              {/* {submitStatus && (
-                <div
-                  className={`p-4 mb-6 rounded-md ${submitStatus.success ? "bg-green-50 text-green-700" : "bg-red-50 text-red-700"}`}
-                >
-                  {submitStatus.message}
-                </div>
-              )} */}
 
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div>
