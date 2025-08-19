@@ -292,7 +292,9 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="flex-1 flex justify-center items-center w-full px-4 sm:px-6 py-3 bg-gray-800 text-white rounded-md hover:bg-gray-700 transition-colors disabled:bg-gray-400 text-sm sm:text-base"
+                    className={`flex-1 ${
+                      isSubmitting ? "cursor-not-allowed" : "cursor-pointer"
+                    } flex   justify-center items-center w-full px-4 sm:px-6 py-3 bg-gray-800 text-white rounded-md hover:bg-gray-700 transition-colors disabled:bg-gray-400 text-sm sm:text-base`}
                   >
                     {isSubmitting ? (
                       "Sending..."

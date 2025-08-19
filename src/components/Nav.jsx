@@ -66,7 +66,7 @@ export default function Nav() {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-6">
+        <nav className="hidden md:flex space-x-6 text-xl font-medium">
           {path !== "/" && (
             <Link href="/" className="hover:text-white transition">
               Home

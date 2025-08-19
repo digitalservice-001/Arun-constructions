@@ -10,7 +10,7 @@ function Footer() {
 
   return (
     <div className="primary-bg text-white p-6 mt-8 w-full">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 px-24">
         {/* Quick Links */}
         <div className="flex flex-col items-start space-y-4">
           <h3 className="text-lg font-bold">Quick Links</h3>
@@ -24,6 +24,9 @@ function Footer() {
           </Link>
           <Link href="/contact-us" className="hover:text-gray-300 transition">
             Contact Us
+          </Link>
+          <Link href="/#services" className="hover:text-gray-300 transition">
+            Our Services
           </Link>
         </div>
 
@@ -58,7 +61,7 @@ function Footer() {
 
       {/* Footer Bottom */}
       <div className="container mx-auto mt-6 pt-4 border-t border-gray-300 text-center text-sm">
-        <p>© 2025 MyApp. All rights reserved.</p>
+        <p>© 2025 . All rights reserved.</p>
       </div>
     </div>
   );

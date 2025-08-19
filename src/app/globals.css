@@ -26,6 +26,10 @@ body {
 }
 
 .primary-bg {
-  @apply bg-amber-200
+  @apply bg-[#173B73]
+  
+}
+.text-primary{
+  @apply text-[#173B73]
 
 }
