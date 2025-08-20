@@ -14,31 +14,31 @@ export default function Home() {
       title: "Alteration Works",
       description:
         "Need changes to your existing property? Our alteration services help you reshape and improve spaces while maintaining safety and quality standards.",
-      image: "",
+      image: "/services/alteration.jpg",
     },
     {
       title: "Renovation Works",
       description:
         "Give your old spaces a fresh look. We handle complete renovation works, adding style, comfort, and value to your home or office",
-      image: "",
+      image: "/services/renovation.jpg",
     },
     {
       title: "Constructions",
       description:
         "From homes to commercial buildings, we deliver strong, reliable, and timely construction services backed by skilled expertise and modern technology.",
-      image: "",
+      image: "/services/construction.jpg",
     },
     {
       title: "Demolition",
       description:
         "We provide safe and controlled demolition services for buildings and structures, ensuring the site is ready for your next project.",
-      image: "",
+      image: "/services/demolition.jpg",
     },
     {
       title: "Interior & Finishing Works",
       description:
         "From painting and flooring to complete interiors, we bring the perfect finishing touches that make your space look elegant and functional.",
-      image: "",
+      image: "/services/interior.jpg",
     },
   ];
   return (
