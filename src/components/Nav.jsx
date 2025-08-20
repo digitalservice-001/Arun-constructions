@@ -198,12 +198,12 @@ export default function Nav() {
   }, [isMenuOpen]);
 
   // Function to determine active link class
-  const getLinkClass = (href) => {
-    const isActive = path === href;
-    return `transition ${
-      isActive ? "text-primary" : "text-gray-800 hover:text-blue-500"
-    }`;
-  };
+  // const getLinkClass = (href) => {
+  //   const isActive = path === href;
+  //   return `transition ${
+  //     isActive ? "text-primary" : "text-gray-800 hover:text-blue-500"
+  //   }`;
+  // };
 
   return (
     <div className="primary-bg text-white md:px-8 mb-0">
@@ -277,7 +277,7 @@ export default function Nav() {
             style={
               path === "/projects" ? { textShadow: "0 0 10px #BA994D" } : {}
             }
-            >
+          >
             Projects
           </Link>
           <Link
@@ -291,7 +291,7 @@ export default function Nav() {
             style={
               path === "/contact-us" ? { textShadow: "0 0 10px #BA994D" } : {}
             }
-            >
+          >
             Contact Us
           </Link>
         </nav>
@@ -303,11 +303,11 @@ export default function Nav() {
           ref={menuRef}
           className="md:hidden fixed inset-0 w-full h-screen bg-black/30 backdrop-blur-lg flex flex-col items-end px-6 py-4 space-y-4 z-50 animate-slide-down transition-all duration-500 ease-in-out"
         >
-          <div className="w-full max-w-xs bg-white/90 rounded-xl shadow-xl p-6 space-y-4 relative">
+          <div className="w-full max-w-xs text-white primary-bg rounded-xl shadow-xl p-6 space-y-4 relative">
             {/* Close Button */}
             <button
               onClick={closeMenu}
-              className="absolute top-3 right-3 text-gray-800 hover:text-blue-500 focus:outline-none"
+              className="absolute top-3 right-3 text-white hover:text-blue-500 focus:outline-none"
               aria-label="Close menu"
             >
               <svg
@@ -330,7 +330,7 @@ export default function Nav() {
               <Link
                 href="/"
                 onClick={closeMenu}
-                className={`block text-lg font-semibold ${getLinkClass("/")}`}
+                className={`block text-lg font-semibold `}
               >
                 Home
               </Link>
@@ -338,18 +338,27 @@ export default function Nav() {
             <Link
               href="/projects"
               onClick={closeMenu}
-              className={`block text-lg font-semibold ${getLinkClass(
-                "/projects"
-              )}`}
-            >
+              className={` block transition text-lg font-semibold  ${
+                path === "/projects" ? "text-[#BA994D]" : ""
+              }`}
+              // className={`block text-lg font-semibold `}
+              style={
+                path === "/projects" ? { textShadow: "0 0 10px #BA994D" } : {}
+              }
+              >
               Projects
             </Link>
             <Link
               href="/contact-us"
               onClick={closeMenu}
-              className={`block text-lg font-semibold ${getLinkClass(
-                "/contact-us"
-              )}`}
+              // className={`block text-white text-lg font-semibold `}
+              className={`block transition text-lg font-semibold  ${
+                path === "/contact-us" ? "text-[#BA994D]" : ""
+              }`}
+              // className={`block text-lg font-semibold `}
+              style={
+                path === "/contact-us" ? { textShadow: "0 0 10px #BA994D" } : {}
+              }
             >
               Contact Us
             </Link>
