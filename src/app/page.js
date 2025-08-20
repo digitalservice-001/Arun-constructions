@@ -44,17 +44,15 @@ export default function Home() {
   return (
     <>
       {/* hero */}
-      <div className="relative min-h-screen flex items-center justify-center px-4">
-        {/* Background Image */}
-        <div className="relative w-full h-[70vh] md:h-screen">
-          <Image
-            src="/homepage/hero1.jpg"
-            alt="Hero Image"
-            fill
-            className="object-cover rounded-none md:rounded-lg"
-            priority
-          />
-        </div>
+      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[75vh] lg:h-screen">
+        l{" "}
+        <Image
+          src="/homepage/hero1.jpg"
+          alt="Hero Image"
+          fill
+          className="sm:object-cover md:object-fill lg:object-cover rounded-none md:rounded-lg"
+          priority
+        />
       </div>
 
       <div className="min-h-screen flex flex-col items-center justify-center px-4 py-10">
