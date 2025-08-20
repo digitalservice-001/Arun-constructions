@@ -42,7 +42,7 @@ export default function ContactPage() {
     }
   };
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-white text-black">
       <section className="py-4">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl md:text-4xl font-bold text-center mb-6">
@@ -57,7 +57,7 @@ export default function ContactPage() {
                 <h2 className="text-2xl font-semibold mb-6 text-center sm:text-left">
                   Our Office
                 </h2>
-                <div className="space-y-6">
+                <div className="space-y-6 ">
                   {/* Address */}
                   <div className="flex items-start">
                     <MapPin className="h-6 w-6 text-gray-700 mr-3 mt-1 shrink-0" />
@@ -109,8 +109,17 @@ export default function ContactPage() {
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h2 className="text-2xl font-semibold mb-6">Location</h2>
                 <div className="aspect-video w-full h-[300px] bg-gray-200 rounded-lg overflow-hidden">
-                  <iframe
+                  {/* <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4991.483216966041!2d76.90617664072526!3d11.020727661361578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85f8857d852e1%3A0xf29692378159e91c!2sArun%20Constructions!5e0!3m2!1sen!2sin!4v1755190915554!5m2!1sen!2sin"
+                    width="100%"
+                    height="450"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe> */}
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3916.2126490091955!2d76.908408!3d11.022666000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTHCsDAxJzIxLjYiTiA3NsKwNTQnMzAuMyJF!5e0!3m2!1sen!2sin!4v1755702125024!5m2!1sen!2sin"
                     width="100%"
                     height="450"
                     style={{ border: 0 }}

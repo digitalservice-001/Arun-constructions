@@ -66,7 +66,7 @@ export default function Nav() {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-6 text-xl font-medium">
+        <nav className="hidden md:flex  space-x-6 text-xl font-medium">
           {path !== "/" && (
             <Link href="/" className="hover:text-white transition">
               Home
@@ -82,12 +82,12 @@ export default function Nav() {
 
         {/* Mobile Navigation Dropdown */}
         {isMenuOpen && (
-          <div className="md:hidden w-full flex flex-col items-start mt-4 space-y-3">
+          <div className="md:hidden w-full flex flex-col backdrop-blur-2xl items-end  ">
             {path !== "/" && (
               <Link
                 href="/"
                 onClick={() => setIsMenuOpen(false)}
-                className="hover:text-white transition"
+                className="hover:text-white transition w-full"
               >
                 Home
               </Link>

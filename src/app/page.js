@@ -44,18 +44,28 @@ export default function Home() {
   return (
     <>
       {/* hero */}
-      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[75vh] lg:h-screen">
-        l{" "}
+      <div className="relative w-full h-[50vh] sm:h-[65vh] md:h-[75vh] lg:h-screen">
         <Image
           src="/homepage/hero1.jpg"
           alt="Hero Image"
           fill
-          className="sm:object-cover md:object-fill lg:object-cover rounded-none md:rounded-lg"
+          className="sm:object-fill md:object-cover lg:object-cover"
           priority
+          // sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 100vw, 100vw"
         />
       </div>
+      {/* <div className="relative w-full mt-16 h-[30vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] max-h-[800px] min-h-[200px] aspect-[4/3] sm:aspect-[16/9]">
+        <Image
+          src="/homepage/hero1.jpg"
+          alt="Hero Image"
+          fill
+          className="object-cover"
+          priority
+          sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 100vw, 100vw"
+        />
+      </div> */}
 
-      <div className="min-h-screen flex flex-col items-center justify-center px-4 py-10">
+      <div className="min-h-screen flex flex-col items-center justify-center px-4 py-10 text-black bg-white">
         <h1 className="font-bold text-3xl text-primary mb-6 text-center md:text-left">
           About Us
         </h1>
@@ -152,9 +162,9 @@ export default function Home() {
       </div> */}
       <div
         id="services"
-        className="min-h-screen flex flex-col items-center px-4 py-10"
+        className="min-h-screen flex flex-col items-center px-4 py-10 bg-white text-black"
       >
-        <h1 className="text-3xl sm:text-4xl font-bold text-primary mb-8">
+        <h1 className="text-3xl sm:text-4xl font-bold text-primary mb-8 ">
           Services
         </h1>
 
@@ -194,30 +204,4 @@ export default function Home() {
       </div>
     </>
   );
-}
-
-{
-  /* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl">
-              {services.map((data, i) => (
-                // <section
-                //   key={i}
-                //   className="bg-white  rounded-lg overflow-hidden p-4 flex flex-col items-center border-2  border-[#6B9FBD] shadow-[0_0_6px_#6B9FBD] hover:border-transparent transition-all duration-300"
-                // >
-                //   <div className="relative w-full h-52 mb-4">
-                //     <Image
-                //       src={data.image}
-                //       alt={data.title}
-                //       fill
-                //       className="object-cover rounded-md"
-                //     />
-                //   </div>
-                //   <h2 className="text-xl font-semibold mb-2 text-center">
-                //     {data.title}
-                //   </h2>
-                //   <p className="text-gray-600 text-sm text-center">
-                //     {data.description}
-                //   </p>
-                // </section>
-              ))}
-            </div> */
 }

@@ -64,7 +64,7 @@ function Footer() {
     //     <p>© 2025 . All rights reserved.</p>
     //   </div>
     // </div>
-    <div className="primary-bg text-white py-8 px-4 sm:px-6 mt-8 w-full">
+    <div className="primary-bg text-white py-8 px-4 sm:px-6 w-full">
       <div className="container mx-auto lg:px-24 grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Quick Links */}
         <div className="flex flex-col items-start space-y-4">
@@ -92,7 +92,8 @@ function Footer() {
             <Mail className="mr-3 mt-1 flex-shrink-0" />
             <Link
               href="mailto:arunconstructionsvadavallicbe@gmail.com"
-              className="hover:text-gray-300 transition break-all"
+              className="hover:text-gray-300 transition 
+             truncate max-w-full text-ellipsis overflow-hidden cursor-pointer"
             >
               arunconstructionsvadavallicbe@gmail.com
             </Link>
@@ -101,7 +102,7 @@ function Footer() {
             <Phone className="mr-3 mt-1 flex-shrink-0" />
             <Link
               href="tel:+917358803892"
-              className="hover:text-gray-300 transition"
+              className="hover:text-gray-300 transition cursor-pointer"
             >
               +91 7358803892
             </Link>
