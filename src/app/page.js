@@ -49,9 +49,9 @@ export default function Home() {
           src="/homepage/hero1.jpg"
           alt="Hero Image"
           fill
-          className="sm:object-fill md:object-cover lg:object-cover"
+          className="sm:object-cover md:object-cover lg:object-cover"
           priority
-          // sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 100vw, 100vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 100vw, 100vw"
         />
       </div>
       {/* <div className="relative w-full mt-16 h-[30vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] max-h-[800px] min-h-[200px] aspect-[4/3] sm:aspect-[16/9]">
