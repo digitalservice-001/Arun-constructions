@@ -200,7 +200,7 @@ export default function Home() {
           </div>
 
           {/* Text Content (always right, centered vertically) */}
-          <div className="w-[58%] sm:w-[55%] md:w-[60%] lg:w-[62%] sm:mt-[6rem] mt-[6rem] text-right flex flex-col justify-center">
+          <div className="w-[58%] sm:w-[55%] md:w-[60%] lg:w-[62%] sm:mt-[6rem] mt-[8rem] text-right flex flex-col justify-center">
             <h2 className="text-white text-[13px] sm:text-lg md:text-3xl lg:text-5xl font-bold leading-snug drop-shadow-lg">
               Building Dreams With Trust & Quality
             </h2>
