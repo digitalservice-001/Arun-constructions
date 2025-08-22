@@ -17,6 +17,7 @@ function page() {
       {/* <p className='text-lg'>This is the projects page.</p>
       <p className='text-lg'>You can add your project details here.</p>
       <p className='text-lg'>Feel free to customize this page as needed.</p> */}
+      
 
       <div className=" p-6 rounded-lg shadow-md w-full flex flex-wrap gap-6 justify-center">
         {data.map((item, i) => (

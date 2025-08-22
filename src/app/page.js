@@ -1,8 +1,12 @@
 "use client";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useState } from "react";
 // import { useEffect, useState } from "react";
 export default function Home() {
+  const controls = useAnimation();
+  const [isHovered, setIsHovered] = useState(false);
+
   const services = [
     {
       title: "Design and Planning",
@@ -120,46 +124,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* <div
-        id="services"
-        className="min-h-screen flex flex-col items-center px-4 py-10"
-      >
-        <h1 className="text-3xl font-bold text-primary mb-8">Services</h1>
-
-        <div className="overflow-hidden w-full py-10 px-8 bg-gray-100">
-          <motion.div
-            className="flex gap-8 h-full"
-            animate={{ x: ["0%", "-100%"] }}
-            transition={{
-              repeat: Infinity,
-              duration: 25, // slower for readability
-              ease: "linear",
-            }}
-            >
-            {[...services, ...services].map((data, i) => (
-              <section
-                key={i}
-                className="bg-white rounded-lg overflow-hidden p-6 flex-shrink-0 w-96 flex flex-col items-center border-2 border-[#6B9FBD] shadow-[0_0_6px_#6B9FBD] hover:border-transparent transition-all duration-300"
-              >
-                <div className="relative w-full h-60 mb-4">
-                  <Image
-                    src={data.image}
-                    alt={data.title}
-                    fill
-                    className="object-cover rounded-md"
-                  />
-                </div>
-                <h2 className="text-2xl font-semibold mb-2 text-center">
-                  {data.title}
-                </h2>
-                <p className="text-gray-600 text-base text-center">
-                  {data.description}
-                </p>
-              </section>
-            ))}
-          </motion.div>
-        </div>
-      </div> */}
       <div
         id="services"
         className="min-h-screen flex flex-col items-center px-4 py-10 bg-white text-black"
@@ -168,14 +132,23 @@ export default function Home() {
           Services
         </h1>
 
-        <div className="overflow-hidden w-full py-10 px-4 sm:px-8 bg-gray-100">
+        <div className="overflow-hidden w-full py-10 px-4 sm:px-8 bg-gray-200">
           <motion.div
             className="flex gap-6 sm:gap-8 h-full w-max" // 👈 Add w-max
-            animate={{ x: ["0%", "-50%"] }} // 👈 Adjust to -50% since you're duplicating the array
+            animate={controls}
+            // animate={{ x: ["0%", "-50%"] }} // 👈 Adjust to -50% since you're duplicating the array
             transition={{
               repeat: Infinity,
               duration: 40,
               ease: "linear",
+            }}
+            onMouseEnter={() => {
+              setIsHovered(true);
+              controls.stop(); // ⏸️ stop scrolling
+            }}
+            onMouseLeave={() => {
+              setIsHovered(false);
+              controls.start({ x: ["0%", "-50%"] }); // ▶️ resume scrolling
             }}
           >
             {[...services, ...services].map((data, i) => (

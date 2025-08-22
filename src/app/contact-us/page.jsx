@@ -82,9 +82,15 @@ export default function ContactPage() {
                       <h3 className="font-medium text-base sm:text-lg">
                         Phone
                       </h3>
-                      <p className="text-gray-600 text-sm sm:text-base">
+                      {/* <p className="text-gray-600 text-sm sm:text-base">
                         +91 7358803892
-                      </p>
+                      </p> */}
+                      <Link
+                        href="tel:+917358803892"
+                        className="text-gray-600 text-sm sm:text-base hover:text-black cursor-pointer"
+                      >
+                        +91 7358803892
+                      </Link>
                     </div>
                   </div>
 
@@ -92,14 +98,18 @@ export default function ContactPage() {
                   <div className="flex items-start">
                     <Mail className="h-6 w-6 text-gray-700 mr-3 mt-1 shrink-0" />
                     <div className="min-w-0">
-                      {" "}
-                      {/* allows inner content to wrap correctly */}
                       <h3 className="font-medium text-base sm:text-lg">
                         Email
                       </h3>
-                      <p className="text-gray-600 text-sm sm:text-base break-words">
+                      {/* <p className="text-gray-600 text-sm sm:text-base break-words">
                         arunconstructionsvadavallicbe@gmail.com
-                      </p>
+                      </p> */}
+                      <Link
+                        href="mailto:arunconstructionsvadavallicbe@gmail.com"
+                        className="hover:text-black text-gray-600  text-sm sm:text-base break-words"
+                      >
+                        arunconstructionsvadavallicbe@gmail.com
+                      </Link>
                     </div>
                   </div>
                 </div>
