@@ -150,110 +150,10 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* <div
-        id="services"
-        className="min-h-screen flex flex-col items-center px-4 py-10 bg-white text-black"
-      >
-        <h1 className="text-3xl sm:text-4xl font-bold text-primary mb-8 ">
-          Services
-        </h1>
 
-        <div className="overflow-hidden w-full py-10 px-4 sm:px-8 bg-gray-200">
-          <motion.div
-            className="flex gap-6 sm:gap-8 h-full w-max" // 👈 Add w-max
-            animate={controls}
-            // animate={{ x: ["0%", "-50%"] }} // 👈 Adjust to -50% since you're duplicating the array
-            transition={{
-              repeat: Infinity,
-              duration: 40,
-              ease: "linear",
-            }}
-            onMouseEnter={() => {
-              setIsHovered(true);
-              controls.stop(); // ⏸️ stop scrolling
-            }}
-            onMouseLeave={() => {
-              setIsHovered(false);
-              controls.start({ x: ["0%", "-50%"] }); // ▶️ resume scrolling
-            }}
-          >
-            {[...services, ...services].map((data, i) => (
-              <section
-                key={i}
-                className="bg-white rounded-lg overflow-hidden p-4 sm:p-6 flex-shrink-0 w-64 sm:w-96 flex flex-col items-center border-2 hover:border-[#6B9FBD] hover:shadow-[0_0_6px_#6B9FBD] border-transparent transition-all duration-300"
-              >
-                <div className="relative w-full h-40 sm:h-60 mb-3 sm:mb-4">
-                  <Image
-                    src={data.image}
-                    alt={data.title}
-                    fill
-                    className="object-cover rounded-md"
-                  />
-                </div>
-                <h2 className="text-lg sm:text-2xl font-semibold mb-1 sm:mb-2 text-center">
-                  {data.title}
-                </h2>
-                <p className="text-gray-600 text-sm sm:text-base text-center">
-                  {data.description}
-                </p>
-              </section>
-            ))}
-          </motion.div>
-        </div>
-      </div> */}
-      {/* <div
-        id="services"
-        className="min-h-screen flex flex-col items-center px-4 py-10 bg-white text-black"
-      >
-        <h1 className="text-3xl sm:text-4xl font-bold text-primary mb-8">
-          Services
-        </h1>
-
-        <div className="overflow-hidden w-full py-10 px-4 sm:px-8 bg-gray-200">
-          <motion.div
-            className="flex gap-6 sm:gap-8 h-full w-max"
-            animate={controls}
-            onUpdate={(latest) => {
-              // ✅ update current position
-              if (typeof latest.x === "number") {
-                currentX.current = latest.x;
-              }
-            }}
-            onMouseEnter={() => {
-              setIsHovered(true);
-              controls.stop(); // pause at current X
-            }}
-            onMouseLeave={() => {
-              setIsHovered(false); // resume from last X
-            }}
-          >
-            {[...services, ...services].map((data, i) => (
-              <section
-                key={i}
-                className="bg-white rounded-lg overflow-hidden p-4 sm:p-6 flex-shrink-0 w-64 sm:w-96 flex flex-col items-center border-2 hover:border-[#6B9FBD] hover:shadow-[0_0_6px_#6B9FBD] border-transparent transition-all duration-300"
-              >
-                <div className="relative w-full h-40 sm:h-60 mb-3 sm:mb-4">
-                  <Image
-                    src={data.image}
-                    alt={data.title}
-                    fill
-                    className="object-cover rounded-md"
-                  />
-                </div>
-                <h2 className="text-lg sm:text-2xl font-semibold mb-1 sm:mb-2 text-center">
-                  {data.title}
-                </h2>
-                <p className="text-gray-600 text-sm sm:text-base text-center">
-                  {data.description}
-                </p>
-              </section>
-            ))}
-          </motion.div>
-        </div>
-      </div> */}
       <div
         id="services"
-        className="min-h-screen flex flex-col items-center px-4 py-10 bg-white text-black"
+        className="h-screen flex flex-col items-center px-4 py-10 bg-white text-black"
       >
         <h1 className="text-3xl sm:text-4xl font-bold text-primary mb-8">
           Services
@@ -304,7 +204,7 @@ export default function Home() {
             ))}
           </motion.div>
         </div>
-      </div>{" "}
+      </div>
     </>
   );
 }
