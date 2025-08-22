@@ -3,21 +3,11 @@ import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import { useRef, useState } from "react";
 import { useEffect } from "react";
+import Link from "next/link";
 export default function Home() {
   const controls = useAnimation();
   const [isPaused, setIsPaused] = useState(false);
   const currentX = useRef(0); // 📝 track current x
-
-  // const startScrolling = (fromX) => {
-  //   controls.start({
-  //     x: [fromX, fromX - 2000], // 👈 adjust distance based on content width
-  //     transition: {
-  //       repeat: Infinity,
-  //       duration: 40,
-  //       ease: "linear",
-  //     },
-  //   });
-  // };
   const startScrolling = (fromX) => {
     controls.start({
       x: [fromX, fromX - 2000], // move continuously left
@@ -73,29 +63,168 @@ export default function Home() {
       image: "/services/interior.jpg",
     },
   ];
+  // <div className="relative w-full h-[50vh] sm:h-[65vh] md:h-[75vh] lg:h-screen overflow-hidden">
+  //   {/* Foreground Image */}
+  //   <div className="absolute sm:-ml-[10rem] lg:-ml-[30rem] flex justify-start z-10 w-full h-full">
+  //     <Image
+  //       src="/homepage/hero2.png"
+  //       alt="Hero"
+  //       fill
+  //       priority
+  //       className="object-contain"
+  //       sizes="(max-width: 640px) 96px, (max-width: 768px) 144px, (max-width: 1024px) 192px, 512px"
+  //     />
+  //   </div>
+  //   {/* Background Image */}
+  //   <Image
+  //     src="/homepage/background.jpg"
+  //     alt="Background"
+  //     fill
+  //     priority
+  //     className="object-cover z-0"
+  //     sizes="100vw"
+  //   />
+
+  //   {/* Text Content */}
+  //   {/* <div className="absolute top-1/2 right-0 transform -translate-y-1/2 px-4 sm:px-8 md:px-20 w-full max-w-6xl text-center sm:text-right z-20">
+  //     <h2 className="text-white text-xl sm:text-2xl md:text-5xl font-bold leading-tight drop-shadow-lg">
+  //       Building Dreams With Trust & Quality
+  //     </h2>
+  //     <br />
+  //     <h3 className="text-amber-500 text-base sm:text-xl md:text-3xl font-semibold mt-3 sm:mt-4 leading-relaxed drop-shadow-md">
+  //       Build on Trust, Delivered with Excellence
+  //     </h3>
+  //     <p className="text-white text-sm sm:text-base md:text-lg mt-5 sm:mt-6 leading-loose drop-shadow-sm">
+  //       We deliver high quality construction solutions backed by expertise,
+  //       transparency, and on-time commitment — ensuring your project is in
+  //       the safest hands.
+  //     </p>
+  //     <button className="mt-6 bg-amber-500 text-white rounded-2xl px-6 py-3 font-bold shadow-md hover:bg-amber-600 transition duration-300">
+  //       Enquiry Now
+  //     </button>
+  //   </div> */}
+  //   <div className="absolute text-sm  top-1/2 right-0 transform -translate-y-1/2 sm:w-3xl w-full px-4 sm:px-14 md:px-8 lg:px-16 z-20 flex justify-end">
+  //     <div className="w-full max-w-xl text-right lg:text-center">
+  //       <h2 className="text-white font-bold leading-tight drop-shadow-lg">
+  //         Building Dreams With Trust & Quality
+  //       </h2>
+  //       <h3 className="text-amber-500 text-xs sm:text-sm md:text-lg lg:text-2xl font-semibold mt-2 sm:mt-3 lg:mt-4 leading-relaxed drop-shadow-md">
+  //         Build on Trust, Delivered with Excellence
+  //       </h3>
+  //       <p className="text-white text-[10px] sm:text-xs md:text-sm lg:text-base mt-3 sm:mt-4 lg:mt-6 leading-relaxed drop-shadow-sm">
+  //         We deliver high quality construction solutions backed by
+  //         expertise, transparency, and on-time commitment — ensuring your
+  //         project is in the safest hands.
+  //       </p>
+  //       <button className="mt-4 sm:mt-5 lg:mt-6 bg-amber-500 text-white rounded-2xl px-4 sm:px-5 lg:px-6 py-2 sm:py-2.5 lg:py-3 text-xs sm:text-sm font-bold shadow-md hover:bg-amber-600 transition duration-300">
+  //         Enquiry Now
+  //       </button>
+  //     </div>
+  //   </div>
+  // </div>
+  // <section className="relative w-full h-[55vh] sm:h-[65vh] md:h-[75vh] lg:h-screen overflow-hidden">
+
+  //   <Image
+  //     src="/homepage/background.jpg"
+  //     alt="Background"
+  //     fill
+  //     priority
+  //     className="object-cover"
+  //     sizes="100vw"
+  //   />
+
+  //   {/* Overlay */}
+  //   <div className="absolute inset-0 bg-black/40" />
+
+  //   {/* Content */}
+  //   <div className="relative z-20 h-full flex items-center justify-between max-w-7xl mx-auto px-4 sm:px-8 lg:px-16">
+  //     {/* Foreground Image (bottom aligned) */}
+  //     <div className="relative w-[55%] sm:w-[50%] md:w-[45%] lg:w-[40%] h-full flex items-end">
+  //       <Image
+  //         src="/homepage/hero2.png"
+  //         alt="Hero"
+  //         width={800}
+  //         height={800}
+  //         priority
+  //         className="object-contain w-full h-auto"
+  //       />
+  //     </div>
+
+  //     {/* Text Content (center aligned vertically, always right) */}
+  //     <div className="w-[45%] sm:w-[50%] md:w-[55%] lg:w-[60%] text-right flex flex-col justify-center">
+  //       <h2 className="text-white text-sm sm:text-xl md:text-3xl lg:text-5xl font-bold leading-tight drop-shadow-lg">
+  //         Building Dreams With Trust & Quality
+  //       </h2>
+  //       <h3 className="text-amber-500 text-xs sm:text-base md:text-2xl lg:text-3xl font-semibold mt-2 sm:mt-4 leading-relaxed drop-shadow-md">
+  //         Build on Trust, Delivered with Excellence
+  //       </h3>
+  //       <p className="text-white text-[10px] sm:text-xs md:text-base lg:text-lg mt-3 sm:mt-5 leading-relaxed drop-shadow-sm">
+  //         We deliver high quality construction solutions backed by
+  //         expertise, transparency, and on-time commitment — ensuring your
+  //         project is in the safest hands.
+  //       </p>
+  //       <Link href={"/contact-us"} className="mt-3 sm:mt-5 bg-amber-500 text-center text-white rounded-2xl px-3 sm:px-6 lg:px-8 py-1.5 sm:py-3 lg:py-3.5 text-[10px] sm:text-sm md:text-base font-bold shadow-md hover:bg-amber-600 transition duration-300">
+  //         Enquiry Now
+  //       </Link>
+  //     </div>
+  //   </div>
+  // </section>
   return (
     <>
-      {/* hero */}
-      <div className="relative w-full h-[50vh] sm:h-[65vh] md:h-[75vh] lg:h-screen">
+      <section className="relative w-full h-[55vh] sm:h-[65vh] md:h-[75vh] lg:h-screen overflow-hidden">
+        {/* Background */}
         <Image
-          src="/homepage/hero1.jpg"
-          alt="Hero Image"
+          src="/homepage/background.jpg"
+          alt="Background"
           fill
-          className="sm:object-cover md:object-cover lg:object-cover"
           priority
-          sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 100vw, 100vw"
-        />
-      </div>
-      {/* <div className="relative w-full mt-16 h-[30vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] max-h-[800px] min-h-[200px] aspect-[4/3] sm:aspect-[16/9]">
-        <Image
-          src="/homepage/hero1.jpg"
-          alt="Hero Image"
-          fill
           className="object-cover"
-          priority
-          sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 100vw, 100vw"
+          sizes="100vw"
         />
-      </div> */}
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/40" />
+
+        {/* Content */}
+        <div className="relative z-20 h-full flex items-center justify-between max-w-7xl mx-auto px-2 sm:px-6 lg:px-16">
+          {/* Foreground Image (bottom aligned, always left) */}
+          <div className="relative w-[42%] sm:w-[55%] md:w-[40%] lg:w-[38%] h-full flex items-end">
+            <Image
+              src="/homepage/hero2.png"
+              alt="Hero"
+              width={1000}
+              height={1000}
+              priority
+              className="object-contain w-full h-auto"
+            />
+          </div>
+
+          {/* Text Content (always right, centered vertically) */}
+          <div className="w-[58%] sm:w-[55%] md:w-[60%] lg:w-[62%] sm:mt-[6rem] mt-[6rem] text-right flex flex-col justify-center">
+            <h2 className="text-white text-[13px] sm:text-lg md:text-3xl lg:text-5xl font-bold leading-snug drop-shadow-lg">
+              Building Dreams With Trust & Quality
+            </h2>
+            <h3 className="text-amber-500 text-[10px] sm:text-base md:text-2xl lg:text-3xl font-semibold mt-1 sm:mt-3 leading-relaxed drop-shadow-md">
+              Build on Trust, Delivered with Excellence
+            </h3>
+            <p className="text-white text-[9px] sm:text-base md:text-base lg:text-lg mt-2 sm:mt-5 leading-relaxed drop-shadow-sm">
+              We deliver high quality construction solutions backed by
+              expertise, transparency, and on-time commitment — ensuring your
+              project is in the safest hands.
+            </p>
+            <button className="mt-2 sm:mt-5 bg-amber-500 text-white rounded-2xl px-3 sm:px-6 lg:px-8 py-1.5 sm:py-3 lg:py-3.5 text-[10px] sm:text-sm md:text-base font-bold shadow-md hover:bg-amber-600 transition duration-300">
+              Enquiry Now
+            </button>
+          </div>
+        </div>
+        <style jsx>{`
+          @media (max-width: 360px) {
+            section {
+              height: 45vh !important; /* smaller height for 320px screens */
+            }
+          }
+        `}</style>
+      </section>
       <div className="min-h-screen flex flex-col items-center justify-center px-4 py-10 text-black bg-white">
         <h1 className="font-bold text-3xl text-primary mb-6 text-center md:text-left">
           About Us
