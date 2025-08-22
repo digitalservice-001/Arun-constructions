@@ -189,19 +189,19 @@ export default function Home() {
         {/* Content */}
         <div className="relative z-20 h-full flex items-center justify-between max-w-7xl mx-auto px-2 sm:px-6 lg:px-16">
           {/* Foreground Image (bottom aligned, always left) */}
-          <div className="relative w-[42%] sm:w-[55%] md:w-[40%] lg:w-[38%] h-full flex items-end">
+          <div className="relative w-[42%] sm:w-[55%] md:w-[40%] lg:w-[38%] h-[300px] sm:h-full flex items-end">
             <Image
               src="/homepage/hero2.png"
               alt="Hero"
-              width={1000}
-              height={1000}
+              width={800}
+              height={800}
               priority
               className="object-contain w-full h-auto"
             />
           </div>
 
           {/* Text Content (always right, centered vertically) */}
-          <div className="w-[58%] sm:w-[55%] md:w-[60%] lg:w-[62%] sm:mt-[6rem] mt-[8rem] text-right flex flex-col justify-center">
+          <div className="w-[58%] sm:w-[55%] md:w-[60%] lg:w-[62%] text-right flex flex-col justify-center">
             <h2 className="text-white text-[13px] sm:text-lg md:text-3xl lg:text-5xl font-bold leading-snug drop-shadow-lg">
               Building Dreams With Trust & Quality
             </h2>
@@ -218,7 +218,8 @@ export default function Home() {
               href={"/contact-us"}
               className="mt-2 flex gap-0.5 justify-center sm:mt-5 bg-amber-500 text-white text-center rounded-2xl px-3 sm:px-6 lg:px-8 py-1.5 sm:py-3 lg:py-3.5 text-[10px] sm:text-sm md:text-base font-bold shadow-md hover:bg-amber-600 transition duration-300"
             >
-              Enquire Now <ArrowRight />
+              <span className="flex mt-1  sm:mt-0">Enquire Now</span>
+              <ArrowRight />
             </Link>
           </div>
         </div>
