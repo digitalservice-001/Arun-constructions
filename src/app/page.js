@@ -4,6 +4,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useRef, useState } from "react";
 import { useEffect } from "react";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 export default function Home() {
   const controls = useAnimation();
   const [isPaused, setIsPaused] = useState(false);
@@ -212,9 +213,13 @@ export default function Home() {
               expertise, transparency, and on-time commitment — ensuring your
               project is in the safest hands.
             </p>
-            <button className="mt-2 sm:mt-5 bg-amber-500 text-white rounded-2xl px-3 sm:px-6 lg:px-8 py-1.5 sm:py-3 lg:py-3.5 text-[10px] sm:text-sm md:text-base font-bold shadow-md hover:bg-amber-600 transition duration-300">
-              Enquiry Now
-            </button>
+            {/* <Link href={"/contact-us"} className="mt-2 flex gap-0.5 justify-center sm:mt-5 bg-amber-500 text-white text-center rounded-2xl px-3 sm:px-6 lg:px-8 py-1.5 sm:py-3 lg:py-3.5 text-[10px] sm:text-sm md:text-base font-bold shadow-md hover:bg-amber-600 transition duration-300"> */}
+            <Link
+              href={"/contact-us"}
+              className="mt-2 flex gap-0.5 justify-center sm:mt-5 bg-amber-500 text-white text-center rounded-2xl px-3 sm:px-6 lg:px-8 py-1.5 sm:py-3 lg:py-3.5 text-[10px] sm:text-sm md:text-base font-bold shadow-md hover:bg-amber-600 transition duration-300"
+            >
+              Enquire Now <ArrowRight />
+            </Link>
           </div>
         </div>
         <style jsx>{`
