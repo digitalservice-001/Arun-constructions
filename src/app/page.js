@@ -167,7 +167,7 @@ export default function Home() {
           </div>
 
           {/* Text Content (always right) */}
-          <div className="w-[45%] sm:w-[50%] md:w-[60%] lg:w-[62%] text-right flex flex-col justify-end sm:justify-center mt-18 sm:mt-0 px-2 sm:px-0">
+          <div className="w-[45%] sm:w-[50%] md:w-[60%] lg:w-[62%] text-right flex flex-col justify-end sm:justify-center mt-40 sm:mt-0 px-2 sm:px-0">
             <div className="mb-2 sm:mb-0">
               <h2 className="text-white text-sm sm:text-lg md:text-3xl lg:text-5xl font-bold leading-tight drop-shadow-lg">
                 Building Dreams With Trust & Quality
