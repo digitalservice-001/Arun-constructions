@@ -206,7 +206,7 @@ export default function Nav() {
   // };
 
   return (
-    <div className="primary-bg text-white md:px-8 mb-0">
+    <div className="primary-bg  top-0 text-white md:px-8 mb-0">
       <div className="container p-2 mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 md:space-x-8">
         {/* Logo */}
         <div className="space-x-2 flex items-center justify-between w-full md:w-auto">

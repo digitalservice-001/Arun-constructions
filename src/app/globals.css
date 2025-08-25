@@ -27,7 +27,8 @@ body {
 
 .primary-bg {
   /* @apply bg-[#173B73] */
-  @apply bg-[#0E2345]
+  /* @apply bg-[#0E2345] */
+  @apply bg-[#173B73]
   
 }
 .text-primary{
