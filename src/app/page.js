@@ -83,7 +83,7 @@ export default function Home() {
         />
 
         {/* Overlay for contrast */}
-        <div className="absolute inset-0 bg-black/30" />
+        {/* <div className="absolute inset-0 bg-black/30" /> */}
       </section>
 
       <div className="min-h-screen flex flex-col items-center justify-center px-4 py-10 text-black bg-white">
