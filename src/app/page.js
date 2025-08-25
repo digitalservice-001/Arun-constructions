@@ -65,152 +65,27 @@ export default function Home() {
     },
   ];
 
-  // <section className="relative w-full h-[60vh] sm:h-[65vh] md:h-[75vh] lg:h-screen overflow-hidden">
-  //   {/* Background */}
-  //   <Image
-  //     src="/homepage/background.jpg"
-  //     alt="Background"
-  //     fill
-  //     priority
-  //     className="object-cover"
-  //     sizes="100vw"
-  //   />
-
-  //   {/* Overlay */}
-  //   <div className="absolute inset-0 bg-black/40" />
-
-  //   {/* Content */}
-  //   <div className="relative z-20 h-full flex items-center justify-between max-w-7xl mx-auto px-2 sm:px-6 lg:px-16">
-  //     {/* Foreground Image (always left) */}
-  //     <div className="relative w-[55%] sm:w-[50%] md:w-[40%] lg:w-[38%] h-full flex items-end">
-  //       <Image
-  //         src="/homepage/hero2.png"
-  //         alt="Hero"
-  //         width={800}
-  //         height={800}
-  //         priority
-  //         className="object-contain w-full h-auto"
-  //       />
-  //     </div>
-
-  //     {/* Text Content (always right) */}
-  //     <div className="w-[45%] sm:w-[50%] md:w-[60%] lg:w-[62%] text-right flex flex-col justify-center px-2 sm:px-0">
-  //       <h2 className="text-white text-sm sm:text-lg md:text-3xl lg:text-5xl font-bold leading-tight drop-shadow-lg">
-  //         Building Dreams With Trust & Quality
-  //       </h2>
-  //       <h3 className="text-amber-500 text-xs sm:text-base md:text-2xl lg:text-3xl font-semibold mt-1 sm:mt-3 leading-relaxed drop-shadow-md">
-  //         Build on Trust, Delivered with Excellence
-  //       </h3>
-  //       <p className="text-white text-[10px] sm:text-sm md:text-base lg:text-lg mt-1 sm:mt-5 leading-relaxed drop-shadow-sm">
-  //         We deliver high quality construction solutions backed by
-  //         expertise, transparency, and on-time commitment — ensuring your
-  //         project is in the safest hands.
-  //       </p>
-  //       <Link
-  //         href={"/contact-us"}
-  //         className="mt-2 sm:mt-5 inline-flex items-center justify-center gap-1 sm:gap-2 bg-amber-500 text-white text-center rounded-2xl px-3 sm:px-6 lg:px-8 py-1.5 sm:py-3 lg:py-3.5 text-[10px] sm:text-sm md:text-base font-bold shadow-md hover:bg-amber-600 transition duration-300"
-  //       >
-  //         <span>Enquire Now</span>
-  //         <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" />
-  //       </Link>
-  //     </div>
-  //   </div>
-
-  //   <style jsx>{`
-  //     @media (max-width: 640px) {
-  //       section {
-  //         height: 60vh !important;
-  //       }
-  //     }
-
-  //     @media (max-width: 400px) {
-  //       section {
-  //         height: 55vh !important;
-  //       }
-  //     }
-
-  //     @media (max-width: 320px) {
-  //       section {
-  //         height: 50vh !important;
-  //       }
-  //     }
-  //   `}</style>
-  // </section>
   return (
     <>
-      <section className="relative w-full h-[60vh] sm:h-[65vh] md:h-[75vh] lg:h-screen overflow-hidden">
-        {/* Background */}
+      <section className="relative w-full h-[30vh] sm:h-[30vh] md:h-[90vh] lg:h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
         <Image
-          src="/homepage/background.jpg"
-          alt="Background"
+          src="/homepage/hero.jpg"
+          alt="Hero Background"
           fill
           priority
-          className="object-cover"
-          sizes="100vw"
+          quality={100}
+          className="sm:object-cover object-center  "
+          sizes="(max-width: 640px) 100vw,
+         (max-width: 1024px) 80vw,
+         (max-width: 1280px) 50vw,
+         33vw"
         />
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/40" />
-
-        {/* Content */}
-        <div className="relative z-20 h-full flex items-center justify-between max-w-7xl mx-auto px-2 sm:px-6 lg:px-16">
-          {/* Foreground Image (always left) */}
-          <div className="absolute w-[55%] sm:w-[50%] md:w-[40%] lg:w-[38%] h-full flex items-end">
-            <Image
-              src="/homepage/hero2.png"
-              alt="Hero"
-              width={800}
-              height={800}
-              priority
-              className="object-contain w-full h-auto"
-            />
-          </div>
-
-          {/* Text Content (always right) */}
-          <div className="w-[100%] sm:w-[50%] leading-[90px]  md:w-[60%] lg:w-[62%] text-right flex flex-col ml-auto relative justify-end  px-2 sm:px-0">
-            <div className="mb-2 sm:mb-0">
-              <h2 className="text-white text-lg w-full sm:text-lg md:text-3xl lg:text-5xl font-bold leading-tight drop-shadow-lg">
-                Building Dreams With Trust & Quality
-              </h2>
-              <h3 className="text-amber-500 text-xs sm:text-base md:text-2xl lg:text-3xl font-semibold mt-1 sm:mt-3 leading-relaxed drop-shadow-md">
-                Build on Trust, Delivered with Excellence
-              </h3>
-              <p className="text-white text-[10px] ml-[13rem] sm:text-sm md:text-base lg:text-lg mt-1 sm:mt-5 leading-relaxed drop-shadow-sm">
-                We deliver high quality construction solutions backed by
-                expertise, transparency, and on-time commitment — ensuring your
-                project is in the safest hands.
-              </p>
-          <Link
-            href={"/contact-us"}
-            className="mt-2 h-[3rem] sm:mt-5 inline-flex items-center justify-center gap-1 sm:gap-2 bg-amber-500 text-white text-center rounded-2xl px-3 sm:px-6 lg:px-8 py-1.5 sm:py-3 lg:py-3.5 text-[10px] sm:text-sm md:text-base font-bold shadow-md hover:bg-amber-600 transition duration-300"
-          >
-            <span>Enquire Now</span>
-            <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" />
-          </Link>
-            </div>
-          </div>
-        </div>
-
-        <style jsx>{`
-          @media (max-width: 640px) {
-            section {
-              height: 60vh !important;
-            }
-          }
-
-          @media (max-width: 400px) {
-            section {
-              height: 55vh !important;
-            }
-          }
-
-          @media (max-width: 320px) {
-            section {
-              height: 50vh !important;
-            }
-          }
-        `}</style>
+        {/* Overlay for contrast */}
+        <div className="absolute inset-0 bg-black/30" />
       </section>
+
       <div className="min-h-screen flex flex-col items-center justify-center px-4 py-10 text-black bg-white">
         <h1 className="font-bold text-3xl text-primary mb-6 text-center md:text-left">
           About Us
@@ -323,3 +198,4 @@ export default function Home() {
     </>
   );
 }
+
